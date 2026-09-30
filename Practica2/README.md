@@ -13,7 +13,7 @@ Familiarizarse con el entorno interactivo de Haskell (**GHCi**), la sintaxis bá
 ## Ejercicio 1: Carga en GHCi
 Captura de pantalla de la terminal al iniciar `ghci` y cargar el archivo `Practica2.hs`:
 
-![Ejercicio1](Prac2_Eje1.png)
+![Ejercicio1](Prac2_Eje2.png)
 
 
 ### Prerrequisitos
