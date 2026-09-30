@@ -22,6 +22,8 @@ El curso sigue la siguiente organización de directorios actual:
 │   ├── README.md
 │   └── Practica1.md
 ├── Practica2/
+│   ├── README.md
+│   └── Practica2.hs
 ├── Practica3/
 ├── Practica4/
 ├── Practica5/
