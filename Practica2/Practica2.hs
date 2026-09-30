@@ -77,3 +77,28 @@ imc kg altura =
                    else "obesidad"
 
 -- Lo hice sin where porque la practica no lo permite
+
+{- Ejercicio 9 
+    Funcion: hipotenusa
+    Descripcion: Calcula la hipotenusa de un triangulo rectangulo, dando la base y la altura
+    Uso: hipotenusa 9.0 12.0 -> 15
+-}
+
+hipotenusa :: Double -> Double -> Double
+hipotenusa b h = sqrt ((b*b)+(h*h))
+
+{- Ejercicio 10
+    Funcion: pendiente
+    Descripcion: Se calcula la pendiente de una recta dados 2 coordenadas de esta
+    Uso: pendiente (3,2) (7,8) -> 1.5
+-}
+pendiente :: (Double, Double) -> (Double, Double) -> Double
+pendiente (x1,y1) (x2,y2) = (y2-y1) / (x2-x1)
+
+{- Ejercicio 11
+    Funcion: distanciaPuntos
+    Descripcion: Calcula la distancia entre dos puntos con coordenadas especificadas
+    Uso: distanciaPuntos (2,1) (5,5) -> 5 
+-}
+distanciaPuntos :: (Double, Double) -> (Double, Double) -> Double
+distanciaPuntos (x1,y1) (x2,y2) = sqrt (((x2-x1)*(x2-x1)) + ((y2-y1)*(y2-y1)))

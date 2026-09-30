@@ -3,7 +3,7 @@
 * **Asignatura:** Estructuras Discretas
 * **Semestre:** 2027-1
 * **Alumno:** Samuel Olivares Angeles
-* **Tiempo estimado/requerido:** 
+* **Tiempo estimado/requerido:** 3-4 horas
 
 
 ## Objetivo de la práctica
