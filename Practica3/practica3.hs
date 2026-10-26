@@ -1,3 +1,5 @@
+import Paridad (esParBin)
+
 {-
     Tipo de dato: TiempoPasado
     Descripcion: Tipo de dato para representar el tiempo que paso en dias o meses
@@ -57,3 +59,23 @@ mensajeCetes :: Double -> TiempoPasado -> String
 mensajeCetes vi periodo = 
     "Despues de " ++ txtPeriodo periodo ++ ", obtuve " ++ show ((cetes vi periodo) - vi) ++ 
     " de rendimiento bruto sin asumir ningun riesgo crediticio. El monto total de mi inversion es de " ++ show (cetes vi periodo) ++ "."
+
+
+{-
+    Funcion: negativos
+    Descripcion: cuenta los numeros negativos de una lista.
+    Uso: negativos [ -1 , 2 , 4 , 6 , -4] -> 2
+-}
+
+negativos :: [Int] -> Int
+negativos xs = length [x | x <- xs, x < 0]
+
+{-
+    Funcion: soloPares
+    Descripcion: Devuelve solo los numeros pares en una lista usando de manera exportada una funcion de clase
+                 llamada esParBin, yo la habia guardado como esParBin asi que mejor mantube el mismo nombre para no complicarme.
+    Uso: soloPares [1 ,2 ,3 ,4] -> [2, 4]
+-}
+
+soloPares :: [Int] -> [Int]
+soloPares xs = [x | x <- xs, esParBin x]
