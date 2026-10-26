@@ -79,3 +79,49 @@ negativos xs = length [x | x <- xs, x < 0]
 
 soloPares :: [Int] -> [Int]
 soloPares xs = [x | x <- xs, esParBin x]
+
+{-
+    Funciones Auxiliares para: primos
+    Descripcion: Funciones que utilice para que la funcion primos funcionara perfectamente
+
+    1. Funcion: divisores
+       Descripcion : Recibe un numero entero n y devuelve una lista con todos los numeros 
+                    del 1 al n que lo dividen exactamente (cuando el residuo con mod es 0)
+    
+    2. Funcion: esPrimo
+       Decripcion: Verifica si un numero es primo revisando que tenga exactamente 2 divisores 
+                    (el 1 y el mismo numero) mediante la funcion length.
+-}
+
+divisores :: Int -> [Int]
+divisores n = [d | d <- [1..n], n `mod` d == 0]
+
+esPrimo :: Int -> Bool
+esPrimo n = length (divisores n) == 2
+
+{-
+    Funcion: primos
+    Descripcion: Devuelve los primos de la lista de el 1 al 20
+    Uso: primos [1..20] -> [2 , 3 , 5 , 7 , 11 , 13 , 17 , 19]
+-}
+primos :: [Int] -> [Int]
+primos xs = [x | x <- xs, esPrimo x]
+
+{-
+    Funcion Auxiliar para : coprimos
+    Descripcion: Son funciones de apoyo para que la funcion coprimos
+        1. Funcion: divisoresComunes
+           Descripcion: Recibe dos numeros enteros (a y b) y devuelve una lista con todos los 
+                        numeros que dividen exactamente a ambos al mismo tiempo (residuo 0 con mod).
+-}
+
+divisoresComunes :: Int -> Int -> [Int]
+divisoresComunes a b = [d | d <- [1..a], a `mod` d == 0, b `mod` d == 0]
+
+{-
+    Funcion: coprimos
+    Descripcion: recibe un enteron y devuelve una lista de los coprimos de n
+    Uso: coprimos 10 -> [1 ,3 ,7 ,9]
+-}
+coprimos :: Int -> [Int]
+coprimos n = [x | x <- [1..n], length (divisoresComunes x n) == 1]
