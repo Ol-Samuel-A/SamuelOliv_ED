@@ -84,3 +84,8 @@ mayorEnt (Neg n) (Suc m) = False
 mayorEnt (Suc n) (Neg m) = True
 mayorEnt (Suc n) (Suc m) = mayorEnt n m
 mayorEnt (Neg n) (Neg m) = not (mayorEnt n m)
+
+
+--Matrioska
+data Matri = Mati | Cont Matri deriving (Eq, Show)
+
