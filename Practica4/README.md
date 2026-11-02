@@ -8,3 +8,6 @@
 
 ## Objetivo de la práctica
 Implementacion de funciones recursivas en Haskell ademas de poder crear modulos e importarlos
+
+Anotaciones momentarias de los problemas que mas me gustaron;
+ejercicio 3
